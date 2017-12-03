@@ -3,8 +3,10 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise';
 
+// Listener services
 import priceDataService from './services/PriceDataService';
 
+// Reducers
 import rangeReducer from './reducers/rangeReducer';
 import priceHistoryReducer from './reducers/priceHistoryReducer';
 
@@ -20,7 +22,10 @@ const middleware = applyMiddleware(
 );
 const store = createStore(reducers, middleware);
 
-// Services
+// Register Services
 priceDataService(store);
 
+/**
+ * Main redux store.
+ */
 export default store;

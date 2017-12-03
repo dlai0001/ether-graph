@@ -14,6 +14,7 @@ RUN npm install
 RUN yarn install
 
 COPY . .
+COPY ./build ./build
 
 EXPOSE 8080
 

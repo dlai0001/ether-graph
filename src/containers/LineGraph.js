@@ -1,9 +1,8 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-
 import { connect } from 'react-redux';
 
-const styles = {};
+const currencyLabel = 'Etherium';
 
 function mapStateToProps(store) {
   return {
@@ -13,11 +12,9 @@ function mapStateToProps(store) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return {}
-}
-
-
+/**
+ * Line graph component.  Displays line graph of the price history.
+ */
 class LineGraph extends React.Component {
 
   render() {
@@ -27,7 +24,7 @@ class LineGraph extends React.Component {
           labels: this.props.store.priceHistory.labels,
           datasets: [
             {
-              label: 'Etherium',
+              label: currencyLabel,
               fill: false,
               lineTension: 0.1,
               backgroundColor: 'rgba(75,192,192,0.4)',
@@ -56,6 +53,4 @@ class LineGraph extends React.Component {
 }
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LineGraph)
+  mapStateToProps)(LineGraph)

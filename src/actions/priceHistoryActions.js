@@ -1,3 +1,9 @@
+/**
+ * Received data from price history request.
+ * @param labels
+ * @param values
+ * @return {{type: string, labels: *, values: *, status: string}}
+ */
 export function receivedPriceHistory(labels, values) {
   return {
     type: 'PRICE_HISTORY_RECEIVED',
@@ -7,6 +13,10 @@ export function receivedPriceHistory(labels, values) {
   };
 }
 
+/**
+ * Price history fetch in process
+ * @return {{type: string, status: string}}
+ */
 export function fetchingPriceHistory() {
   return {
     type: 'PRICE_HISTORY_FETCH',

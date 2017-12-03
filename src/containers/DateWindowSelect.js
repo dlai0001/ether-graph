@@ -1,9 +1,7 @@
 import Chip from 'material-ui/Chip';
 import React from 'react';
 import { blue300 } from 'material-ui/styles/colors';
-
 import { connect } from 'react-redux';
-
 import { changeRange } from '../actions/rangeActions';
 
 const styles = {
@@ -34,6 +32,10 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
+/**
+ * Time frame range select component.  This dispays a bar of pills that
+ * allows the user to select the time range. 1 day - 1 year.
+ */
 class DateWindowSelect extends React.Component {
 
   render() {

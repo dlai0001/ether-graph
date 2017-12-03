@@ -1,3 +1,9 @@
+/**
+ * Tracks price data and labels.
+ * @param state
+ * @param action
+ * @return {*}
+ */
 function priceHistory(state = { labels: null, values: null, status: 'init' }, action) {
 
   switch (action.type) {

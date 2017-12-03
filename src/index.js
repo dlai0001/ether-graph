@@ -15,7 +15,9 @@ const ThemedApp = () => (
   </MuiThemeProvider>
 );
 
-
+/**
+ * Bootstrapping the app /w store provider.
+ */
 ReactDOM.render(
   <Provider store={store}>
     <ThemedApp/>

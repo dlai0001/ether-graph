@@ -14,6 +14,8 @@ const HOST = '0.0.0.0';
 // App
 const app = express();
 app.use(cors());
+app.use(express.static('build'));
+
 
 app.get('/api/eth/day', (req, res) => {
   axios.get('https://min-api.cryptocompare.com/data/histohour?fsym=ETH&tsym=USD&limit=24&')
